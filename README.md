@@ -1,2 +1,0 @@
-# AbdulRehman
-Personal portfolio website.
