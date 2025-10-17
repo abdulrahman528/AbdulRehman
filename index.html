@@ -4,39 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ABDUL REHMAN | Graphic Designer</title>
-  <link rel="stylesheet" href="A_style.css">
+
   <style>
+    /* Basic layout */
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
       margin: 0;
       padding: 0;
       background: #f7f7f7;
       color: #333;
     }
 
-    /* Hero Section */
+    /* Hero section */
     #hero {
       text-align: center;
-      padding: 80px 20px;
+      padding: 100px 20px;
       background: white;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
 
     #hero img {
-      width: 220px;
+      width: 240px;
       height: auto;
-      border-radius: 50%;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;          /* ✅ normal corners */
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      animation: fadeIn 1.5s ease-out;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      margin-top: 20px;
+    #hero h1 {
+      font-size: 2.8rem;
+      margin-top: 25px;
+      animation: slideUp 1.5s ease-out;
     }
 
-    p {
-      font-size: 1.2rem;
+    #hero p {
+      font-size: 1.3rem;
       color: #555;
+      animation: fadeIn 2s ease-out;
     }
 
     section {
@@ -75,25 +79,36 @@
     a:hover {
       text-decoration: underline;
     }
+
+    /* 🔥 Animation keyframes */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to   { transform: translateY(0); opacity: 1; }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- Hero Section -->
+  <!-- 🧍 Hero Section -->
   <section id="hero">
     <img src="myphoto.jpg" alt="Abdul Rehman">
     <h1>Abdul Rehman</h1>
     <p>Creative Graphic Designer</p>
   </section>
 
-  <!-- About Section -->
+  <!-- 📄 About Section -->
   <section id="about">
     <h2>About Me</h2>
     <p>I’m a passionate graphic designer who loves creating modern, eye-catching, and clean designs for brands and businesses.</p>
   </section>
 
-  <!-- Services Section -->
+  <!-- 💼 Services Section -->
   <section id="services">
     <h2>My Services</h2>
     <ul>
@@ -104,19 +119,18 @@
     </ul>
   </section>
 
-  <!-- Work Section -->
+  <!-- 🖼️ Work Section -->
   <section id="work">
     <h2>My Work</h2>
     <p>Coming Soon — I’ll add my designs here soon!</p>
   </section>
 
-  <!-- Contact Section -->
+  <!-- 📩 Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:abdulrahman@email.com">abdulrahman@email.com</a></p>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2025 Abdul Rehman | All Rights Reserved</p>
   </footer>
