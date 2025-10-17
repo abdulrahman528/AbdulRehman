@@ -2,7 +2,6 @@
 const sections = document.querySelectorAll('section');
 
 window.addEventListener('scroll', checkSections);
-
 checkSections();
 
 function checkSections() {
