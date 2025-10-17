@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: radial-gradient(circle at top, #1e293b, #0f172a);
   color: #fff;
   overflow-x: hidden;
 }
@@ -18,8 +18,8 @@ body {
 #hero img {
   width: 250px;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
   animation: zoomIn 1.5s ease-out;
 }
 
@@ -55,7 +55,7 @@ h2 {
 }
 
 p, li {
-  color: #f0f0f0;
+  color: #e5e7eb;
   font-size: 1.1rem;
   line-height: 1.6;
 }
@@ -72,9 +72,9 @@ li {
 /* FOOTER */
 footer {
   text-align: center;
-  background: #0b1a23;
+  background: #111827;
   padding: 15px;
-  color: #ccc;
+  color: #9ca3af;
 }
 
 /* ANIMATIONS */
