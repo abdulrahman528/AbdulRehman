@@ -1,74 +1,94 @@
-/* Basic Styling for Abdul Rehman Portfolio */
-* {
+/* GENERAL */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  overflow-x: hidden;
 }
 
-body {
-  background: #0f0f0f;
-  color: white;
+/* HERO SECTION */
+#hero {
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+#hero img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  animation: zoomIn 1.5s ease-out;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-top: 25px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideUp 1.2s ease-out;
+}
+
+#hero p {
+  font-size: 1.4rem;
+  color: #dcdcdc;
+  margin-top: 10px;
+  animation: fadeIn 2s ease-out;
+}
+
+/* OTHER SECTIONS */
+section {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideUp 1.5s ease-out;
+}
+
+p, li {
+  color: #f0f0f0;
+  font-size: 1.1rem;
   line-height: 1.6;
 }
 
-/* Header */
-header {
-  text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #1a1a1a, #000);
-  animation: fadeInDown 1s ease-in-out;
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-header h1 {
-  font-size: 3rem;
-  color: #00bcd4;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+li {
+  margin: 10px 0;
 }
 
-/* Section Styling */
-section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 1s ease;
-}
-
-section.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Headings */
-h2 {
-  color: #00bcd4;
-  font-size: 2rem;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-
-/* Footer */
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 30px;
-  margin-top: 60px;
-  background: #111;
-  color: #aaa;
-  font-size: 0.9rem;
+  background: #0b1a23;
+  padding: 15px;
+  color: #ccc;
 }
 
-/* Animation */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
