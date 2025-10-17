@@ -5,77 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abdul Rehman | Graphic Designer</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .profile-photo {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #00ffc6;
-      box-shadow: 0 0 25px rgba(0, 255, 198, 0.4);
-      animation: float 3s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-
-    h1 {
-      margin-top: 20px;
-      font-size: 2.2rem;
-      background: linear-gradient(90deg, #00ffc6, #00bfff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: glow 2s ease-in-out infinite alternate;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #00ffc6; }
-      to { text-shadow: 0 0 25px #00bfff; }
-    }
-
-    .intro-text {
-      max-width: 600px;
-      font-size: 1rem;
-      color: #e0e0e0;
-      margin-top: 15px;
-      line-height: 1.6;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.9rem;
-      color: #888;
-    }
-  </style>
 </head>
 <body>
-  <img src="myphoto.jpg" alt="Abdul Rehman" class="profile-photo" />
+  <!-- Hero Section -->
+  <section id="hero">
+    <img src="myphoto.jpg" alt="Abdul Rehman" />
+    <h1 class="glow-text">Abdul Rehman</h1>
+    <p class="subtitle">Creative Graphic Designer</p>
+  </section>
 
-  <h1>Abdul Rehman</h1>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a passionate graphic designer who loves creating clean, modern, and creative designs
+      for brands and social media.
+    </p>
+  </section>
 
-  <p class="intro-text">
-    Hi, I’m <b>Abdul Rehman</b> — a passionate and creative <b>Graphic Designer</b>.  
-    I love turning ideas into visually stunning designs that help brands stand out.  
-    I’m confident, flexible, and easy to communicate with, always open to learning new things and improving my craft.  
-    My goal is to deliver designs that don’t just look good, but also connect with people.
-  </p>
+  <section id="services">
+    <h2>My Services</h2>
+    <ul>
+      <li>Logo Design</li>
+      <li>Social Media Posts</li>
+      <li>Video Thumbnails</li>
+      <li>Branding & Visual Identity</li>
+    </ul>
+  </section>
 
-  <footer>© 2025 Abdul Rehman | All Rights Reserved</footer>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:abdulrahman@email.com">abdulrahman@email.com</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Abdul Rehman | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
