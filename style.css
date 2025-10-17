@@ -23,8 +23,9 @@ body {
 #hero img {
   width: 250px;
   border-radius: 15px;
+  background: radial-gradient(circle, rgba(0,0,0,0.3), transparent);
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
-  animation: zoomIn 1.5s ease-out;
+  animation: zoomIn 1.5s ease-out, float 4s ease-in-out infinite;
 }
 
 #hero h1 {
@@ -33,7 +34,7 @@ body {
   background: linear-gradient(90deg, #00c6ff, #0072ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: slideUp 1.2s ease-out;
+  animation: slideUp 1.2s ease-out, glow 2s ease-in-out infinite alternate;
 }
 
 #hero p {
@@ -47,6 +48,14 @@ body {
 section {
   padding: 70px 20px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 h2 {
@@ -95,4 +104,16 @@ footer {
 @keyframes zoomIn {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
+}
+
+/* 🔥 Floating Image Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* 💫 Soft Glow for Name */
+@keyframes glow {
+  from { text-shadow: 0 0 10px #00c6ff; }
+  to { text-shadow: 0 0 25px #0072ff; }
 }
