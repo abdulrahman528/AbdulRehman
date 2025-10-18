@@ -1,113 +1,136 @@
-/* RESET */
+/* ========== RESET ========== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
+/* ========== BODY ========== */
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
-  color: #fff;
+  background: radial-gradient(circle at top, #1e293b, #0f172a);
+  color: #ffffff;
   overflow-x: hidden;
 }
 
-/* HERO SECTION */
+/* ========== HERO SECTION ========== */
 #hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 60px 20px;
+  text-align: center;
+  padding: 100px 20px;
   animation: fadeIn 1.5s ease-out;
 }
 
-.hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1100px;
-  flex-wrap: wrap;
-  gap: 60px;
+#hero img {
+  width: 250px;
+  border-radius: 15px; /* rectangular image */
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  animation: zoomIn 1.5s ease-out;
 }
 
-/* ✅ PROFILE PHOTO — Always Rectangle */
-.profile-photo {
-  width: 280px;
-  height: 380px;
-  border-radius: 20px !important; /* stop circle rounding */
-  border: 3px solid #00ffc6;
-  box-shadow: 0 0 35px rgba(0, 255, 198, 0.4);
-  object-fit: cover;
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Force rectangle on all screen sizes */
-@media (max-width: 768px) {
-  .profile-photo {
-    width: 240px;
-    height: 320px;
-    border-radius: 20px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .profile-photo {
-    width: 220px;
-    height: 300px;
-    border-radius: 20px !important;
-  }
-}
-
-/* TEXT */
-.hero-text {
-  max-width: 600px;
-  text-align: left;
-  animation: slideIn 1.5s ease-out;
-}
-
-.glow-text {
+#hero h1 {
   font-size: 3rem;
-  background: linear-gradient(90deg, #00ffc6, #00bfff);
+  margin-top: 25px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: glow 2s ease-in-out infinite alternate;
+  animation: slideUp 1.2s ease-out;
 }
 
-.intro {
-  margin-top: 20px;
-  font-size: 1.1rem;
-  color: #d9d9d9;
-  line-height: 1.7;
+#hero p {
+  font-size: 1.4rem;
+  color: #dcdcdc;
+  margin-top: 10px;
+  animation: fadeIn 2s ease-out;
 }
 
-/* FOOTER */
-footer {
-  background: #111;
+/* ========== SOCIAL SECTION ========== */
+.social-section {
+  margin-top: 40px;
   text-align: center;
-  padding: 20px;
-  color: #aaa;
-  font-size: 0.9rem;
 }
 
-/* ANIMATIONS */
+.social-section h3 {
+  font-size: 1.6rem;
+  color: #dcdcdc;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 114, 255, 0.3);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.5);
+}
+
+/* ========== OTHER SECTIONS ========== */
+section {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideUp 1.5s ease-out;
+}
+
+p, li {
+  color: #e5e7eb;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  background: #111827;
+  padding: 15px;
+  color: #9ca3af;
+}
+
+/* ========== ANIMATIONS ========== */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-@keyframes glow {
-  from { text-shadow: 0 0 10px #00ffc6; }
-  to { text-shadow: 0 0 25px #00bfff; }
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes slideIn {
-  from { transform: translateX(50px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
