@@ -15,70 +15,48 @@ body {
 
 /* ========== HERO SECTION ========== */
 #hero {
-  text-align: center;
-  padding: 100px 20px;
-  animation: fadeIn 1.5s ease-out;
+  padding: 60px 20px;
 }
 
-#hero img {
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.hero-photo img {
   width: 250px;
   border-radius: 15px;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
   animation: zoomIn 1.5s ease-out;
 }
 
-#hero h1 {
-  font-size: 3rem;
-  margin-top: 25px;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: slideUp 1.2s ease-out;
-}
-
-#hero p {
-  font-size: 1.4rem;
+.hero-intro p {
+  font-size: 1.2rem;
   color: #dcdcdc;
-  margin-top: 10px;
+  line-height: 1.6;
   animation: fadeIn 2s ease-out;
 }
 
-/* ========== SOCIAL SECTION ========== */
-.social-section {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.social-section h3 {
-  font-size: 1.6rem;
-  color: #dcdcdc;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
+/* Social Buttons */
 .social-buttons {
   display: flex;
   justify-content: center;
   gap: 15px;
-  flex-wrap: wrap;
+  margin-top: 15px;
 }
 
-.btn {
-  display: inline-block;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 114, 255, 0.3);
+.social-buttons a img {
+  width: 35px;
+  filter: grayscale(100%);
+  transition: filter 0.3s, transform 0.3s;
 }
 
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.5);
+.social-buttons a img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2);
 }
 
 /* ========== OTHER SECTIONS ========== */
@@ -133,4 +111,22 @@ footer {
 @keyframes zoomIn {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
+}
+
+/* ========== RESPONSIVE (LAPTOP) ========== */
+@media screen and (min-width: 992px) {
+  .hero-container {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 60px;
+  }
+  .hero-intro {
+    flex: 1;
+  }
+  .hero-photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
 }
