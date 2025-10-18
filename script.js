@@ -1,15 +1,11 @@
-// Smooth fade-in on scroll
+// Smooth reveal animation on scroll
 const sections = document.querySelectorAll("section");
 
-window.addEventListener("scroll", checkSections);
-checkSections();
+window.addEventListener("scroll", () => {
+  const trigger = window.innerHeight * 0.85;
 
-function checkSections() {
-  const triggerBottom = window.innerHeight * 0.85;
-  sections.forEach((section) => {
-    const sectionTop = section.getBoundingClientRect().top;
-    if (sectionTop < triggerBottom) {
-      section.classList.add("fade-in");
-    }
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top < trigger) section.classList.add("visible");
   });
-}
+});
