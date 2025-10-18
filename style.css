@@ -113,7 +113,7 @@ footer {
   to { transform: scale(1); opacity: 1; }
 }
 
-/* ========== RESPONSIVE (LAPTOP) ========== */
+/* ========== RESPONSIVE (LAPTOP/DESKTOP) ========== */
 @media screen and (min-width: 992px) {
   .hero-container {
     flex-direction: row;
@@ -121,12 +121,12 @@ footer {
     text-align: left;
     gap: 60px;
   }
-  .hero-intro {
-    flex: 1;
-  }
   .hero-photo {
     flex: 1;
     display: flex;
     justify-content: center;
+  }
+  .hero-intro {
+    flex: 1;
   }
 }
