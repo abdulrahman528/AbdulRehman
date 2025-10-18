@@ -32,15 +32,23 @@ body {
   gap: 60px;
 }
 
-/* PHOTO */
+/* ✅ PROFILE PHOTO — rectangle forever */
 .profile-photo {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
+  width: 280px;
+  height: 380px;
+  border-radius: 20px;
   border: 3px solid #00ffc6;
-  box-shadow: 0 0 30px rgba(0, 255, 198, 0.4);
+  box-shadow: 0 0 35px rgba(0, 255, 198, 0.4);
   object-fit: cover;
   animation: float 3s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .profile-photo {
+    width: 220px;
+    height: 300px;
+    border-radius: 20px;
+  }
 }
 
 /* TEXT */
@@ -93,33 +101,4 @@ footer {
 @keyframes slideIn {
   from { transform: translateX(50px); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
-}
-
-/* RESPONSIVE (MOBILE VIEW) */
-@media (max-width: 768px) {
-  #hero {
-    padding: 100px 20px;
-  }
-
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-text {
-    text-align: center;
-  }
-
-  .glow-text {
-    font-size: 2rem;
-  }
-
-  .profile-photo {
-    width: 180px;
-    height: 180px;
-  }
-
-  .intro {
-    font-size: 1rem;
-  }
 }
